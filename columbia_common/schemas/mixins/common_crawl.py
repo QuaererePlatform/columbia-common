@@ -1,9 +1,9 @@
-__all__ = ['CCDataBase', 'CCIndexesBase', 'CCScansBase']
+__all__ = ['CCDataFieldsMixin', 'CCIndexesFieldsMixin', 'CCScansFieldsMixin']
 
 from marshmallow import fields
 
 
-class CCDataBase:
+class CCDataFieldsMixin:
     url_key = fields.String(required=True)
     timestamp = fields.String(required=True)
     url = fields.Url(required=True)
@@ -18,12 +18,15 @@ class CCDataBase:
     languages = fields.String()
 
 
-class CCIndexesBase:
+class CCIndexesFieldsMixin:
     id = fields.String(required=True)
     name = fields.String(required=True)
     timegate = fields.Url(required=True)
     cdx_api = fields.Url(required=True)
 
 
-class CCScansBase:
-    pass
+class CCScansFieldsMixin:
+    web_site_key = fields.String(required=True)
+    web_site_url = fields.Url(required=True)
+    cc_index_key = fields.String(required=True)
+    status = fields.String(required=True)
