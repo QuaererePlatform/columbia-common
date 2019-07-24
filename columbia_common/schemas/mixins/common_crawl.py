@@ -29,4 +29,5 @@ class CCScansFieldsMixin:
     web_site_key = fields.String(required=True)
     web_site_url = fields.Url(required=True)
     cc_index_key = fields.String(required=True)
-    status = fields.String(required=True)
+    status = fields.String()
+    task_id = fields.UUID()
