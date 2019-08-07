@@ -1,4 +1,6 @@
-from columbia_common.schemas import (CCDataSchemaV1, CCIndexesSchemaV1, CCScansSchemaV1)
+from columbia_common.schemas import (
+    CCDataSchemaV1, CCIndexesSchemaV1, CCScansSchemaV1)
+
 
 def test_common_crawl():
     _ = CCDataSchemaV1()
