@@ -3,10 +3,8 @@ __all__ = ['CCDataSchema', 'CCIndexesSchema', 'CCScansSchema']
 from marshmallow import fields
 from quaerere_base_common.schema import BaseSchema
 
-from columbia_common.schemas.mixins import (
-    CCDataFieldsMixin,
-    CCIndexesFieldsMixin,
-    CCScansFieldsMixin)
+from .mixins import (
+    CCDataFieldsMixin, CCIndexesFieldsMixin, CCScansFieldsMixin)
 
 
 class CCDataSchema(CCDataFieldsMixin, BaseSchema):
