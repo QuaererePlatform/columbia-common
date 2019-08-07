@@ -5,13 +5,13 @@ from marshmallow import fields
 
 class CCDataFieldsMixin:
     url_key = fields.String(required=True)
-    timestamp = fields.String(required=True)
+    timestamp = fields.DateTime(required=True)
     url = fields.Url(required=True)
-    status = fields.String(required=True)
+    status = fields.Integer(required=True)
     filename = fields.String(required=True)
     offset = fields.String()
     digest = fields.String()
-    length = fields.String()
+    length = fields.Integer()
     mime = fields.String()
     mime_detected = fields.String()
     charset = fields.String()
