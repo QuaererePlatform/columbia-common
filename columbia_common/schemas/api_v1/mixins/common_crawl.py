@@ -22,7 +22,7 @@ class CCIndexesFieldsMixin:
     id = fields.String(required=True)
     name = fields.String(required=True)
     timegate = fields.Url(required=True)
-    cdx_api = fields.Url(required=True)
+    cdx_api = fields.Url(required=True, load_from='cdx-api')
 
 
 class CCScansFieldsMixin:
