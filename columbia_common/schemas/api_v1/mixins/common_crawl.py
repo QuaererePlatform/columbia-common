@@ -9,7 +9,7 @@ class CCDataFieldsMixin:
     url = fields.Url(required=True)
     status = fields.Integer(required=True)
     filename = fields.String(required=True)
-    offset = fields.String()
+    offset = fields.Integer()
     digest = fields.String()
     length = fields.Integer()
     mime = fields.String()
