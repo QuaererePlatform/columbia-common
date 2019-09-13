@@ -5,7 +5,7 @@ from marshmallow import fields
 
 class CCDataFieldsMixin:
     url_key = fields.String(required=True)
-    timestamp = fields.DateTime(required=True)
+    timestamp = fields.DateTime(format="%Y%m%d%H%M%S", required=True)
     url = fields.Url(required=True)
     status = fields.Integer(required=True)
     filename = fields.String(required=True)
