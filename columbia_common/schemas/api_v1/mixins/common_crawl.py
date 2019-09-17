@@ -4,7 +4,7 @@ from marshmallow import fields
 
 
 class CCDataFieldsMixin:
-    url_key = fields.String(required=True)
+    url_key = fields.String(required=True, load_from='urlkey')
     timestamp = fields.DateTime(format="%Y%m%d%H%M%S", required=True)
     url = fields.Url(required=True)
     status = fields.Integer(required=True)
@@ -13,7 +13,7 @@ class CCDataFieldsMixin:
     digest = fields.String()
     length = fields.Integer()
     mime = fields.String()
-    mime_detected = fields.String()
+    mime_detected = fields.String(load_from='mime-detected')
     charset = fields.String()
     languages = fields.String()
 
