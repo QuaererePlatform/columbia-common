@@ -11,7 +11,7 @@ from setuptools.command.install import install
 PROJECT_NAME = 'quaerere-columbia-common'
 INSTALL_REQUIRES = [
     'marshmallow<3,>=2.19.0',
-    'quaerere-base-common',
+    'quaerere-base-common>=0.1.1',
 ]
 SETUP_REQUIRES = [
     'pytest-runner',
