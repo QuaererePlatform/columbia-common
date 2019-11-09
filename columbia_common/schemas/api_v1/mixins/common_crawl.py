@@ -16,6 +16,8 @@ class CCDataFieldsMixin:
     mime_detected = fields.String(load_from='mime-detected')
     charset = fields.String()
     languages = fields.String()
+    cc_scan_key = fields.String(allow_none=True)
+    web_page_key = fields.String(allow_none=True)
 
 
 class CCIndexesFieldsMixin:
